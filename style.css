@@ -14,8 +14,10 @@ a {
   text-decoration: none;
 }
 
+// Поменяй на .title
 h1 {
   text-transform: uppercase;
+  /* relative и z-index в продительский блок (title-box) */
   position: relative;
   z-index: 3;
   font-weight: 800;
@@ -31,6 +33,8 @@ h1 {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  /* Тут надо сделать выравнивание по вертикали с помощью flex, а не mt */
+  /* Так же тебе надо сделать отсупы сверху и снизу с помощью padding */
 }
 
 .header:before {
@@ -52,23 +56,30 @@ h1 {
   position: relative;
 }
 
+/* Поменяй на .title-box, или как назовешь в HTML */
 .title {
   text-align: center;
   padding: 100px 240px 120px 240px;
 }
 
 .logo-link {
+  /* relative и z-index в продительский блок (header-wrapper) */
   position: relative;
   z-index: 3;
   display: block;
+
+  /* Не правильно */
   padding-top: 30px;
 }
 
 .header-menu {
+  /* relative и z-index в продительский блок (header-wrapper) */
   position: relative;
   z-index: 3;
   font-weight: 400;
   display: flex;
+  
+  /* Не правильно */
   margin-top: 44px;
 }
 
@@ -76,6 +87,7 @@ h1 {
   margin-left: 30px;
 }
 
+/* Надо добавить состояние */
 .nav-link {
   text-transform: uppercase;
   color: #fff;
