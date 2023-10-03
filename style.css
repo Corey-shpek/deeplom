@@ -14,12 +14,8 @@ a {
   text-decoration: none;
 }
 
-// Поменяй на .title
-h1 {
+.title {
   text-transform: uppercase;
-  /* relative и z-index в продительский блок (title-box) */
-  position: relative;
-  z-index: 3;
   font-weight: 800;
   font-size: 45px;
   color: #fff;
@@ -33,8 +29,10 @@ h1 {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
-  /* Тут надо сделать выравнивание по вертикали с помощью flex, а не mt */
-  /* Так же тебе надо сделать отсупы сверху и снизу с помощью padding */
+  position: relative;
+  z-index: 3;
+  padding: 30px 0;
+  align-items: center;
 }
 
 .header:before {
@@ -56,31 +54,20 @@ h1 {
   position: relative;
 }
 
-/* Поменяй на .title-box, или как назовешь в HTML */
-.title {
+.title-box {
+  position: relative;
+  z-index: 3;
   text-align: center;
-  padding: 100px 240px 120px 240px;
+  padding: 95px 240px 120px 240px;
 }
 
 .logo-link {
-  /* relative и z-index в продительский блок (header-wrapper) */
-  position: relative;
-  z-index: 3;
   display: block;
-
-  /* Не правильно */
-  padding-top: 30px;
+  width: 179px;
 }
 
 .header-menu {
-  /* relative и z-index в продительский блок (header-wrapper) */
-  position: relative;
-  z-index: 3;
-  font-weight: 400;
   display: flex;
-  
-  /* Не правильно */
-  margin-top: 44px;
 }
 
 .menu-option:nth-child(n + 2) {
@@ -89,6 +76,12 @@ h1 {
 
 /* Надо добавить состояние */
 .nav-link {
+  font-weight: 400;
   text-transform: uppercase;
   color: #fff;
+}
+
+.nav-link:hover {
+  font-weight: 700;
+  text-decoration: underline;
 }
