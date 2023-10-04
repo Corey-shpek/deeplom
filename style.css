@@ -81,7 +81,7 @@ a {
 }
 
 .nav-link:hover {
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: underline;
 }
 
@@ -108,6 +108,15 @@ a {
 
 .post-info {
   display: flex;
+}
+
+.post-description {
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+.post-description:nth-child(n + 2) {
+  margin-top: 21px;
 }
 
 .tag-link {
