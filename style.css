@@ -251,6 +251,7 @@ a {
   display: flex;
 }
 
+/* TODO убрать стандартную обводку и сделать как в макете */
 .aside-search-input {
   width: 220px;
   height: 45px;
@@ -260,6 +261,7 @@ a {
   font-size: 13px;
 }
 
+/* TODO сделать курсор */
 .aside-search-submit {
   width: 50px;
   background-color: #b59f5b;
@@ -273,7 +275,7 @@ a {
 .aside-newsletter {
   margin-top: 60px;
 }
-
+/* TODO убрать стандартную обводку и сделать как в макете */
 .aside-newsletter-input {
   margin-top: 25px;
   box-sizing: border-box;
@@ -393,6 +395,8 @@ a {
   margin-left: 30px;
 }
 
+/* TODO https://github.com/netology-code/html-2-diploma#%D0%B2%D1%91%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%B8%D0%BA%D0%BE%D0%BD%D0%BE%D0%BA */
+
 .footer-social-link {
   display: block;
   width: 20px;
@@ -411,6 +415,8 @@ a {
 .footer-tumblr-social-link {
   background-image: url(./icons/003-tumblr.png);
 }
+
+/* TODO сделать состояние */
 .footer-copypaste {
   font-weight: 700;
   font-size: 12px;
