@@ -18,6 +18,17 @@ a {
   margin: 0 220px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* header */
 
 .header {
@@ -115,13 +126,12 @@ a {
   margin-left: 30px;
 }
 
-
 .main-tag {
   display: inline;
 }
-/* TODO сделать отступы слева у всех элементов начиная со второго */
-.main-tag:nth-child(n + 1) {
-  margin-right: 20px;
+
+.main-tag:nth-child(n + 2) {
+  margin-left: 20px;
 }
 
 .main-tag-link:hover {
@@ -230,10 +240,10 @@ a {
   color: #878787;
 }
 
-/* TODO сделать отступы сверху */
 .aside-post-title {
   font-size: 14px;
   line-height: 1.28;
+  margin-top: 10px;
 }
 
 .aside-post-title-link {
@@ -251,7 +261,6 @@ a {
   display: flex;
 }
 
-/* TODO убрать стандартную обводку и сделать как в макете */
 .aside-search-input {
   width: 220px;
   height: 45px;
@@ -259,9 +268,12 @@ a {
   border: 0;
   padding-left: 20px;
   font-size: 13px;
+  outline: none;
+}
+.aside-search-input:focus-visible {
+  border-bottom: 1px solid #ebe7d7;
 }
 
-/* TODO сделать курсор */
 .aside-search-submit {
   width: 50px;
   background-color: #b59f5b;
@@ -270,12 +282,13 @@ a {
   font-size: 0;
   background-position: center;
   border: 0;
+  cursor: pointer;
 }
 
 .aside-newsletter {
   margin-top: 60px;
 }
-/* TODO убрать стандартную обводку и сделать как в макете */
+
 .aside-newsletter-input {
   margin-top: 25px;
   box-sizing: border-box;
@@ -285,6 +298,11 @@ a {
   background-color: #f4f7f6;
   border: 0;
   font-size: 13px;
+  outline: none;
+}
+
+.aside-newsletter-input:focus-visible {
+  border-bottom: 1px solid #ebe7d7;
 }
 
 .aside-newsletter-submit {
@@ -395,8 +413,6 @@ a {
   margin-left: 30px;
 }
 
-/* TODO https://github.com/netology-code/html-2-diploma#%D0%B2%D1%91%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%B8%D0%BA%D0%BE%D0%BD%D0%BE%D0%BA */
-
 .footer-social-link {
   display: block;
   width: 20px;
@@ -416,9 +432,9 @@ a {
   background-image: url(./icons/003-tumblr.png);
 }
 
-/* TODO сделать состояние */
 .footer-copypaste {
   font-weight: 700;
   font-size: 12px;
   color: #999999;
+  cursor: pointer;
 }
